@@ -46,14 +46,14 @@
 							$description = get_sub_field('description');
 						?>
 							<div class="swiper-slide">
-								<img src="<?php echo $img; ?>" alt="">
+								<img src="<?php echo $img; ?>" class="swiper-lazy" alt="">
 							</div>
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
 			</div>
 
-			<div class="work__top gallery-top  swiper-container">
+			<div class="work__top gallery-top swiper-container">
 				<div class="swiper-wrapper">
 					<?php if( have_rows('work') ): ?>
 

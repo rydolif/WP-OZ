@@ -36,14 +36,16 @@
 						?>
 							
 							<div class="hero__item swiper-slide">
-								<img src="<?php echo $img; ?>" alt="">
+								<img src="<?php echo $img; ?>" class="swiper-lazy" alt="">
 								<div class="hero__container container">
 									<div class="hero__content">
 										<h1>
 											<?php echo $title; ?>
 										</h1>
 									</div>
-									<?php echo do_shortcode('[contact-form-7 id="55" title="Консультация"]') ?>
+									<div class="hero__form">
+										<?php echo do_shortcode('[contact-form-7 id="55" title="Консультация"]') ?>
+									</div>
 								</div>
 							</div>
 
@@ -94,7 +96,9 @@
 						?>
 
 							<li>
-								<a href="<?php echo $link; ?>"><?php echo $title; ?> <span><?php echo $number; ?></span></a>
+								<a href="<?php echo $link; ?>">
+									<?php echo $title; ?> <span><?php echo $number; ?></span>
+								</a>
 								<div>
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/info.png" alt="">
 									<?php echo $description; ?>

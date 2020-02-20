@@ -2,7 +2,16 @@ $(function() {
 
 //-------------------------------попандер---------------------------------------
   $('.modal').popup({transition: 'all 0.3s'});
-  
+
+
+//------------------------------------form-------------------------------------------
+  $('input[type="tel"]').mask('+0 (000) 000 0000');
+
+  jQuery.validator.addMethod("phoneno", function(phone_number, element) {
+     return this.optional(element) || phone_number.match(/+\0\\([0-9]{3}\)\s[0-9]{3} [0-9]{2}[0-9]{2}/);
+  }, "Введите Ваш телефон");
+
+
 //-------------------------------preloader---------------------------------------
     setTimeout(function() {
       $('#ctn-preloader').addClass('loaded');
@@ -26,10 +35,11 @@ $(function() {
         el: '.hero__pagination',
         clickable: true,
       },
-	  // autoplay: {
-	  //   delay: 4500,
-	  //   disableOnInteraction: false,
-	  // },
+    lazy: true,
+	  autoplay: {
+	    delay: 4500,
+	    disableOnInteraction: false,
+	  },
 	});
 
 //-------------------------------work slider---------------------------------------
@@ -55,6 +65,7 @@ $(function() {
     var galleryTop = new Swiper('.gallery-top', {
       spaceBetween: 40,
       loopedSlides: 5,
+      lazy: true,
       thumbs: {
         swiper: galleryThumbs,
       },

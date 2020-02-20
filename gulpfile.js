@@ -46,6 +46,8 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'OZ/assets/libs/jquery/dist/jquery.min.js',  			//----jquery
+		'OZ/assets/libs/jquery.mask.min.js',  			//----jquery
+		'OZ/assets/libs/jquery.validate.js',  			//----jquery
 		'OZ/assets/libs/swiper/swiper.min.js', 			//----слайдер
 		'OZ/assets/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
 		'OZ/assets/libs/src/fullpage.js', 		//----картінка прикліку
