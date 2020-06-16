@@ -8,7 +8,7 @@ $(function() {
   $('input[type="tel"]').mask('+0 (000) 000 0000');
 
   jQuery.validator.addMethod("phoneno", function(phone_number, element) {
-     return this.optional(element) || phone_number.match(/+\0\\([0-9]{3}\)\s[0-9]{3} [0-9]{2}[0-9]{2}/);
+     return this.optional(element) || phone_number.match(/+\0\([0-9]{3}\)\s[0-9]{3} [0-9]{2}[0-9]{2}/);
   }, "Введите Ваш телефон");
 
 
@@ -37,7 +37,7 @@ $(function() {
       },
     lazy: true,
 	  autoplay: {
-	    delay: 4500,
+	    delay: 9000,
 	    disableOnInteraction: false,
 	  },
 	});
@@ -85,6 +85,7 @@ $(function() {
 	    anchors: ['firstPage', 'twoPage', 'threePage', 'fourPage'], // якори
 	    menu: '.page', // меню
 	    lazyLoad: true, // оптимизация
+      scrollOverflow: true,
 	    // navigation: true, // навигация
 	    // navigationTooltips: ['01', '02', '03', '04'], // названия меню
 	    showActiveTooltip: true, // меню

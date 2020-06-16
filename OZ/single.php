@@ -27,7 +27,7 @@
 			<div>
 				<h2>Каталог</h2>
 				<span></span>
-				<b>LOFT</b>
+				<b><?php the_title(); ?></b>
 			</div>
 
 			<div>

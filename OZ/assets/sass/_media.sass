@@ -180,24 +180,36 @@
 		&__wrap
 			width: 43%
 	
-	.work__top_content
-		div
-			width: 52%
-
-		li,
-		p
-			font-size: 1em
-			line-height: 1.6
-			margin-bottom: 5px
-
-		b
-			font-size: 1.2em
-	
 	.work
+		&__header
+			flex-wrap: wrap
+
+			div
+				flex-wrap: wrap
+				margin-bottom: 10px
+
+				&:last-child
+					justify-content: flex-end
+					width: 100%
+					
+
+		&__top_content
+			div
+				width: 52%
+
+			li,
+			p
+				font-size: 1em
+				line-height: 1.6
+				margin-bottom: 5px
+
+			b
+				font-size: 1.2em
+	
 		&__next, 
 		&__prev
-			width: 40px
-			height: 40px
+			width: 40px !important
+			height: 40px !important
 
 			&::before
 				width: 15px
@@ -281,16 +293,11 @@
 		width: 62%
 
 	.catalog__list
-		width: 70%
-
-
 		li
 			font-size: 3vh
-			color: #000
 
 			div
 				max-width: 205px
-				background-color: rgba(#fff, .9)
 
 	.contacts__wrap p
 		flex-wrap: wrap
@@ -461,8 +468,8 @@
 
 		&__next,
 		&__prev
-			width: 30px
-			height: 30px
+			width: 30px !important
+			height: 30px !important
 			border: 2px solid #fff
 
 			&::before
@@ -483,7 +490,9 @@
 	.swiper-pagination
 		height: 35px
 
-
+	.catalog__list
+		li
+			width: 100%
 
 
 

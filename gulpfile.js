@@ -52,6 +52,7 @@ gulp.task('scripts', function() {
 		'OZ/assets/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
 		'OZ/assets/libs/src/fullpage.js', 		//----картінка прикліку
 		'OZ/assets/libs/jquery.popupoverlay.js', 		//----картінка прикліку
+		'OZ/assets/libs/src/scrolloverflow.min.js', 		//----картінка прикліку
 		'OZ/assets/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
